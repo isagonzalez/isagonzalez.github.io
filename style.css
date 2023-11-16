@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary: #98b47a; 
+    --light-primary: #cbe3b0;
+    --light: rgba(200, 200, 200, 0.11);
+    --white: #fff;
+    --dark: #353734;
+    --dark-variant: #767A74;
+    --background: #f8f9f6;
+    --danger: #d31d3e;
+    --warning: #f8be2b;
+    --success: #7abc33;
+    
+    --card-border-radius: 1.5rem;
+    --border-radius: 2rem;
+
+    --box-shadow: 0 2rem 2rem var(--light);
+
+    --transition: all 0.25s ease;
+}
+
+.dark-mode {
+    --background: ;
+    --light: ;
+    --white: ;
+    --dark: ;
+    --dark-variant: ;
+    --box-shadow: 0 2rem 2rem var(--light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--dark);
+    background-color: var(--background);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1em;
+}
+
+a {
+    color: var(--dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bx {
+    font-size: 1.5rem;
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    max-width: 1057px;
+    margin: 0 auto;
+    gap: 1.5rem;
+    grid-template-columns: 13rem auto;
+}
+
+
+
+/* Sidebar */
+aside .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.25rem;
+}
+
+aside .logo img {
+    width: 80%;
+    height: auto;
+}
+
+aside .logo .close {
+    padding-right: 1rem;
+    display: none;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 16px;
+    position: relative;
+    height: 87vh;
+    top: 1.25rem;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+aside .sidebar:hover {
+    box-shadow: none;
+}
+
+aside .sidebar a {
+    display: flex;
+    align-items: center;
+    height: 3.25rem;
+    position: relative;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    padding-left: 1.5rem;
+    color: var(--dark-variant);
+    transition: var(--transition);
+}
+
+aside .sidebar a:first-child {
+    margin-top: 0.5rem;
+}
+
+aside .sidebar a.resume {
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+aside .sidebar a.active {
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: 1rem;
+}
+
+aside .sidebar a:not(.active):hover {
+    color: var(--primary);
+}
+
+aside .sidebar a:not(.active):hover .bx {
+    margin-left: 0.75rem;
+}
+
+aside .sidebar a .bx {
+    min-width: 40px;
+    justify-content: center;
+    transition: var(--transition);
+}
+/* End of Sidebar */
+
+
+/* Main */
+main {
+    margin-top: 1.25rem;
+}
+
+/* Intro */
+main .intro {
+    background-color: var(--white);
+    padding: 4rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: url("cover.png");
+    object-fit: cover;
+    background-position: center;
+    color: white;
+    max-width: 825px;
+}
+
+main .intro h1, main .intro h2, main .intro p {
+    text-shadow: #d31d3e;
+}
+/* End of Intro */
+
+
+
+/* Case Studies */
+.container main {
+    width: 100%;
+}
+
+.container main .case-studies {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 516.5px));
+    grid-gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container main .case {
+    background-color: var(--white);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.container main .case-studies .case img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: calc(var(--card-border-radius)*0.6);
+}
+
+.container main .case-studies .case .title {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    border-radius: calc(var(--card-border-radius)*0.6);
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    display: none;
+}
+
+.container main .case-studies .case .title h2 {
+    font-weight: 400;
+}
+
+.container main .case:hover {
+    
+}

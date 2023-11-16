@@ -1,7 +1,77 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Isabel E. Gonzalez</title>
+</head>
 <body>
-  <h1>Isabel Gonzalez</h1>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside>
+            <div class="logo">
+                <img src="assets/logo/Combination Logo.png" alt="Isabel Elena Gonzalez">
+                <div class="close" #id="close-btn">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <h3>About Me</h3>
+                </a>
+                <a href="#" class="active">
+                    <i class='bx bx-briefcase-alt' ></i>
+                    <h3>Work</h3>
+                </a>
+                <a href="#">
+                    <i class='bx bx-mail-send' ></i>
+                    <h3>Contact</h3>
+                </a>
+                <a class="resume" target="_blank" href="https://drive.google.com/file/d/1teP1GCRQJXf8mF4WAHHrLEinpeK52P25/view?usp=sharing">
+                    <i class='bx bxs-file-pdf' ></i>
+                    <h3>Resume</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Intro -->
+            <div class="intro">
+                <h2>Hello, I'm Isa</h2>
+                <h1>I'm studying computer science, cognitive science and design. I aspire to combine my three passions to create user friendly designs.</h1>
+                <p>This past summer, I worked for Be Your Own Boss (BYOB), an MIT delta v startup, as an UX/UI Designer.</p>
+            </div>
+            <!-- End of Intro -->
+
+            <!-- Case Studies -->
+            <div class="case-studies">
+                <div class="case">
+                    <img src="assets/page-covers/BYOB.png" alt="BYOB">
+                    <div class="title"><h2>BYOB</h2></div>
+                </div>
+                <div class="case">
+                    <img src="assets/page-covers/PurplePath.png" alt="PurplePath">
+                    <div class="title"><h2>PurplePath</h2></div>
+                </div>
+                <div class="case">
+                    <img src="assets/page-covers/Very Best.png" alt="Very Best">
+                    <div class="title"><h2>Very Best</h2></div>
+                </div>
+                <div class="case">
+                    <img src="assets/page-covers/Coming Soon.png" alt="TBD">
+                    <div class="title"><h2>Coming Soon</h2></div>
+                </div>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+    </div>
+
+    <script src="index.js" ></script>
 </body>
- 
 </html>
