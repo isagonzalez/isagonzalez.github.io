@@ -89,6 +89,12 @@ img {
 
 
 /* Sidebar */
+.container aside {
+    width: 208px;
+    position: fixed;
+    z-index: 1;
+}
+
 aside .logo {
     display: flex;
     align-items: center;
@@ -169,11 +175,12 @@ aside .sidebar a .bx {
 /* Main */
 main {
     margin-top: 1.25rem;
+    margin-left: 232px;
 }
 
 /* Intro */
 main .intro {
-    background-color: var(--white);
+    background-color: var(--primary);
     padding: 4rem;
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
@@ -183,7 +190,6 @@ main .intro {
     text-align: center;
     flex-wrap: wrap;
     gap: 1rem;
-    background: url("cover.png");
     object-fit: cover;
     background-position: center;
     color: white;
@@ -199,7 +205,8 @@ main .intro h1, main .intro h2, main .intro p {
 
 /* Case Studies */
 .container main {
-    width: 100%;
+    width: 300%;
+    position: relative;
 }
 
 .container main .case-studies {
